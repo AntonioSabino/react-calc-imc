@@ -9,17 +9,20 @@ type Props = {
 
 export const GridItem = ({ level }: Props) => {
     return (
-        <div>
-            <div className={styles.main} style={{ background: level.color }}>
-                <div className={styles.gridIcon}>
-                    {<img src={level.icon === 'up' ? upImage : downImage} alt="" width="30" />}
+        <div className={styles.main} style={{ background: level.color }}>
+            <div className={styles.gridIcon}>
+                {<img src={level.icon === 'up' ? upImage : downImage} alt="" width="30" />}
+            </div>
+            <div className={styles.gridTitle}>{level.title}</div>
+            {level.yourImc &&
+                <div className={styles.yourIMC}>
+                    Seu IMC é de {level.yourImc} kg/m²
                 </div>
-                <div className={styles.gridTitle}>{level.title}</div>
-                <div className={styles.gridInfo}>
-                    <>
-                        IMC está entre <strong>{level.imc[0]}</strong> e <strong>{level.imc[1]}</strong>
-                    </>
-                </div>
+            }
+            <div className={styles.gridInfo}>
+                <>
+                    IMC está entre <strong>{level.imc[0]}</strong> e <strong>{level.imc[1]}</strong>
+                </>
             </div>
         </div>
     );

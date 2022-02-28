@@ -1,6 +1,5 @@
 .main {
     flex: 1;
-    height: 100%;
     color: #FFF;
     border-radius: 10px;
     display: flex;
@@ -22,6 +21,10 @@
     font-size: 23px;
     font-weight: bold;
     margin-top: 5px;
+}
+.yourIMC {
+    font-size: 17px;
+    margin: 10px 0 30px 0;
 }
 .gridInfo {
     font-size: 12px;
